@@ -1,0 +1,21 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      python: 3.8
+    commands:
+      # Instalar dependências do requirements.txt
+      - echo Installing dependencies...
+      - pip install -r lambda_functions/requirements.txt -t lambda_functions/
+
+  build:
+    commands:
+      # Rodar os testes unitários
+      - echo Running tests...
+      - pytest lambda_functions/test_lambda_function_1.py
+      - pytest lambda_functions/test_lambda_function_2.py
+
+artifacts:
+  files:
+    - '**/*'
