@@ -5,13 +5,13 @@ phases:
     runtime-versions:
       python: 3.9
     commands:
-      - echo Installing dependencies...
-      - pip install --upgrade pip
-      - pip install pytest
+      - pip install beautifulsoup4
   pre_build:
     commands:
-      - echo Preparing for build...
+      - echo "Validando o HTML..."
   build:
     commands:
-      - echo Running tests...
-      - pytest lambda_functions/test_lambda_function_1.py
+      - pytest test_html.py
+artifacts:
+  files:
+    - index.html
