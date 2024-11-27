@@ -54,9 +54,8 @@ Antes de começar, certifique-se de ter:
 #### **Configurar Permissões Públicas**
 
 1. Acesse a aba **Permissions** do bucket.
-2. Role até **Bucket Policy** e insira a seguinte política:
+2. Role até **Bucket Policy** e insira a seguinte política json:
 
-"```json
 {
   "Version": "2012-10-17",
   "Statement": [
@@ -68,7 +67,7 @@ Antes de começar, certifique-se de ter:
       "Resource": "arn:aws:s3:::static-site-deploy/*"
     }
   ]
-}"
+}
 
 ### **Criar o Pipeline no CodePipeline**
 
