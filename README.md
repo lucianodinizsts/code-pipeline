@@ -56,7 +56,7 @@ Antes de começar, certifique-se de ter:
 1. Acesse a aba **Permissions** do bucket.
 2. Role até **Bucket Policy** e insira a seguinte política:
 
-```json
+"```json
 {
   "Version": "2012-10-17",
   "Statement": [
@@ -68,7 +68,7 @@ Antes de começar, certifique-se de ter:
       "Resource": "arn:aws:s3:::static-site-deploy/*"
     }
   ]
-}
+}"
 
 ### **Criar o Pipeline no CodePipeline**
 
@@ -155,3 +155,4 @@ Se ocorrerem erros, revise os logs disponíveis para cada etapa no console do pi
    ```html
    Bem-vindo ao Site Estático!
    Este site foi implantado usando AWS CodePipeline.
+
